@@ -70,7 +70,6 @@ jobs:
         sed -i 's/ImmortalWrt/Redmi-AX6000/g' package/base-files/files/bin/config_generate
         sed -i 's/ImmortalWrt-2.4G/hu/g' package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
         sed -i 's/ImmortalWrt-5G/hu_5G/g' package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
-    #    sed -i 's/root:::0:99999:7:::/root:$1$ss5WnMmy$frM3RtHolbeBLKvxqMuV./:20026:0:99999:7:::/g' package/base-files/files/etc/shadow
         neofetch
 
     - name: 下载依赖
