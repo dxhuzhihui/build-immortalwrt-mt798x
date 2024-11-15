@@ -62,11 +62,14 @@ jobs:
         #cp -f $GITHUB_WORKSPACE/.config $GITHUB_WORKSPACE/openwrt/
         #./scripts/feeds install -a
 
-    #- name: 修改 Lan IP
-    #  run: |
-    #    cd openwrt
-    #    sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
-    #    neofetch
+    - name: 修改 Lan IP
+      run: |
+        cd openwrt
+        sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
+        sed -i 's/ImmortalWrt/Redmi-AX6000/g' package/base-files/files/bin/config_generate
+        sed -i 's/ImmortalWrt-2.4G/hu/g' package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
+        sed -i 's/ImmortalWrt-5G/hu_5G/g' package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
+        neofetch
 
     - name: 下载依赖
       run: |
