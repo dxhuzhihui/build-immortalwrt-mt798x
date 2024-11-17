@@ -73,13 +73,13 @@ jobs:
         sed -i 's/ImmortalWrt-5G/hu_5G/g' package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
         neofetch
 
-    - name: 下载依赖
-      run: |
-        cd openwrt
-        make defconfig
-        make download -j8
-        find dl -size -1024c -exec ls -l {} \;
-        find dl -size -1024c -exec rm -f {} \;
+    #- name: 下载依赖
+    #  run: |
+     #   cd openwrt
+     #   make defconfig
+     #   make download -j8
+     #   find dl -size -1024c -exec ls -l {} \;
+     #   find dl -size -1024c -exec rm -f {} \;
 
     - name: 编译固件
       run: |
